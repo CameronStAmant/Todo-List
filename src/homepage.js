@@ -18,6 +18,16 @@ const homepage = () => {
   workSpace.id = 'workspace';
   workSpace.innerHTML = 'Projects';
   contentDiv.appendChild(workSpace);
+
+  let defaultSpace = document.createElement('div');
+  defaultSpace.id = 'defaultSpace';
+  defaultSpace.innerHTML = 'Default';
+  workSpace.appendChild(defaultSpace);
+
+  // let todoSpace = document.createElement('div');
+  // todoSpace.id = 'todospace';
+  // todoSpace.innerHTML = 'Todo';
+  // contentDiv.appendChild(todoSpace);
 }
 
 export default homepage

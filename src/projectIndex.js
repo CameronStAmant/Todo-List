@@ -6,6 +6,7 @@ const projectIndexToPage = () => {
     let name = document.getElementById('title').value;
     let workspaceArea = document.getElementById('workspace');
     let newProjectDiv = document.createElement('div');
+    newProjectDiv.id = name;
     newProjectDiv.innerHTML = name;
     let newProject = projectFactory(name);
     workspaceArea.appendChild(newProjectDiv);
