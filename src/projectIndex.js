@@ -1,0 +1,15 @@
+import projectFactory from './projectFactory';
+
+const projectIndexToPage = () => {
+  let addProject = document.getElementById('addProject');
+  addProject.addEventListener('click', () => {
+    let name = document.getElementById('title').value;
+    let workspaceArea = document.getElementById('workspace');
+    let newProjectDiv = document.createElement('div');
+    newProjectDiv.innerHTML = name;
+    let newProject = projectFactory(name);
+    workspaceArea.appendChild(newProjectDiv);
+  });
+}
+
+export default projectIndexToPage
