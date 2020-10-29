@@ -19,18 +19,25 @@ const todoButtonActions = () => {
   titleSubmit.id = 'addTodo';
   titleSubmit.value = 'Create';
 
+  let titleCancel = document.createElement('INPUT');
+  titleCancel.setAttribute('type', 'button');
+  titleCancel.id = 'cancelTodo';
+  titleCancel.value = 'Cancel';
+
   todoForm.appendChild(titleLabel);
   todoForm.appendChild(titleInput);
   todoForm.appendChild(todoProjectLabel);
   todoForm.appendChild(todoProject);
   todoForm.appendChild(titleSubmit);
+  todoForm.appendChild(titleCancel);
   createTodo.appendChild(todoForm);
 
   const todoButton = document.getElementById('createTodo');
   addTodoButton.addEventListener('click', () => {
     todoButton.style.display = 'block';
-    console.log('hi');
-    let projectArrayList = projectButtonList();
+    let projectArrayList = []
+    todoProject.innerHTML = '';
+    projectArrayList = projectButtonList();
 
     for (let i = 0; i < projectArrayList.length; i++) {
 
