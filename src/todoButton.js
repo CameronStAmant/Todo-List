@@ -1,11 +1,44 @@
+import projectIndexToPage from './projectIndex';
+import projectButtonList from './projectList';
+
 const todoButtonActions = () => {
   let todoForm = document.createElement('FORM');
-  todoForm.innerHTML = "<label for='todoTitle'>Title:</label><input type='text' id='todoTitle' name='todoTitle' value=''><br><label for='todoProject'>Project:</label><br><select id='todoProject' name='todoProject'><option value='defaultSpace'>Default</option><option value='defaultSpace2'>Default2</option></select><input type='button' id='addTodo' value='Create'>";
+  let titleLabel = document.createElement('label');
+  titleLabel.innerHTML = 'Title:';
+  let titleInput = document.createElement('INPUT');
+  titleInput.setAttribute('type', 'text');
+  titleInput.id = 'todoTitle';
+
+  let todoProjectLabel = document.createElement('label');
+  todoProjectLabel.innerHTML = 'Project';
+  let todoProject = document.createElement('SELECT');
+  todoProject.id = 'todoProject';
+
+  let titleSubmit = document.createElement('INPUT');
+  titleSubmit.setAttribute('type', 'button');
+  titleSubmit.id = 'addTodo';
+  titleSubmit.value = 'Create';
+
+  todoForm.appendChild(titleLabel);
+  todoForm.appendChild(titleInput);
+  todoForm.appendChild(todoProjectLabel);
+  todoForm.appendChild(todoProject);
+  todoForm.appendChild(titleSubmit);
   createTodo.appendChild(todoForm);
 
   const todoButton = document.getElementById('createTodo');
   addTodoButton.addEventListener('click', () => {
     todoButton.style.display = 'block';
+    console.log('hi');
+    let projectArrayList = projectButtonList();
+
+    for (let i = 0; i < projectArrayList.length; i++) {
+
+      let a = document.createElement('option');
+      a.value = projectArrayList[i];
+      a.innerHTML = projectArrayList[i];
+      todoProject.appendChild(a);
+    }
   });
 }
 

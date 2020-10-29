@@ -34,11 +34,6 @@ const homepage = () => {
   defaultSpace.id = 'defaultSpace';
   defaultSpace.innerHTML = 'Default';
   workSpace.appendChild(defaultSpace);
-
-  let defaultSpace2 = document.createElement('div');
-  defaultSpace2.id = 'defaultSpace2';
-  defaultSpace2.innerHTML = 'Default2';
-  workSpace.appendChild(defaultSpace2);
 }
 
 export default homepage
