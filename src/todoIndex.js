@@ -12,6 +12,10 @@ const todoIndexToPage = () => {
     let selectedProject = document.getElementById('todoProject').value;
     let newTodo = todoFactory(name, selectedProject);
     document.getElementById(selectedProject).appendChild(newTodoDiv);
+    const todoButton = document.getElementById('createTodo');
+    const todoTitle = document.getElementById('todoTitle');
+    todoButton.style.display = 'none';
+    todoTitle.value = '';
   });
 }
 
