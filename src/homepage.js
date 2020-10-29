@@ -14,6 +14,17 @@ const homepage = () => {
   createProject.id = 'createProject';
   contentDiv.appendChild(createProject);
 
+
+  let addTodoButton = document.createElement('BUTTON');
+  addTodoButton.innerHTML = '+ Todo';
+  addTodoButton.id = 'addTodoButton';
+  contentDiv.appendChild(addTodoButton);
+
+  let createTodo = document.createElement('div');
+  createTodo.id = 'createTodo';
+  contentDiv.appendChild(createTodo);
+
+
   let workSpace = document.createElement('div');
   workSpace.id = 'workspace';
   workSpace.innerHTML = 'Projects';
@@ -24,10 +35,10 @@ const homepage = () => {
   defaultSpace.innerHTML = 'Default';
   workSpace.appendChild(defaultSpace);
 
-  // let todoSpace = document.createElement('div');
-  // todoSpace.id = 'todospace';
-  // todoSpace.innerHTML = 'Todo';
-  // contentDiv.appendChild(todoSpace);
+  let defaultSpace2 = document.createElement('div');
+  defaultSpace2.id = 'defaultSpace2';
+  defaultSpace2.innerHTML = 'Default2';
+  workSpace.appendChild(defaultSpace2);
 }
 
 export default homepage

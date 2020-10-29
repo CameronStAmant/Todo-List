@@ -6,7 +6,11 @@
   width: 30%;
   height: 100%;
   border: 5px solid black;
-  text-align: center;
+  /* text-align: center; */
+}
+
+.item {
+  text-indent: 1em;
 }
 
 #todospace {
@@ -22,5 +26,9 @@
 }
 
 #createProject {
+  display: none;
+}
+
+#createTodo {
   display: none;
 }
