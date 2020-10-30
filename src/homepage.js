@@ -1,3 +1,5 @@
+import projectIndexToPage from './projectIndex';
+
 const homepage = () => {
   let contentDiv = document.getElementById('content');
   let header = document.createElement('h1');
@@ -29,11 +31,6 @@ const homepage = () => {
   workSpace.id = 'workspace';
   workSpace.innerHTML = 'Projects';
   contentDiv.appendChild(workSpace);
-
-  let defaultSpace = document.createElement('div');
-  defaultSpace.id = 'defaultSpace';
-  defaultSpace.innerHTML = 'Default';
-  workSpace.appendChild(defaultSpace);
 }
 
 export default homepage

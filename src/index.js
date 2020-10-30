@@ -7,6 +7,8 @@ import todoButtonActions from './todoButton';
 import todoIndexToPage from './todoIndex';
 import todoCancelButton from './todoCancelButton';
 import projectCancelButton from './projectCancelButton';
+import deleteProject from './deleteProject';
+import defaultProject from './defaultProject';
 
 homepage();
 projectButtonActions();
@@ -15,3 +17,5 @@ todoButtonActions();
 todoIndexToPage();
 todoCancelButton();
 projectCancelButton();
+defaultProject();
+deleteProject();
