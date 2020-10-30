@@ -2,22 +2,26 @@
   text-align: center;
 }
 
+#space {
+    display: flex;
+    /* flex-direction: rows; */
+}
+
 #workspace {
   width: 30%;
   height: 100%;
   border: 5px solid black;
-  /* text-align: center; */
+}
+
+#todoSpace {
+  width: 70%;
+  height: 100%;
+  border: 5px solid black;
+  text-align: center;
 }
 
 .item {
   text-indent: 1em;
-}
-
-#todospace {
-  width: 30%;
-  height: 100%;
-  border: 5px solid black;
-  text-align: center;
 }
 
 .add {
@@ -34,5 +38,5 @@
 }
 
 .delete-btn {
-  display: inline;
+  display: flex;
 }

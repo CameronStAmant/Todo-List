@@ -26,11 +26,19 @@ const homepage = () => {
   createTodo.id = 'createTodo';
   contentDiv.appendChild(createTodo);
 
+  let space = document.createElement('div');
+  space.id = 'space';
+  contentDiv.appendChild(space);
 
   let workSpace = document.createElement('div');
   workSpace.id = 'workspace';
   workSpace.innerHTML = 'Projects';
-  contentDiv.appendChild(workSpace);
+  space.appendChild(workSpace);
+
+  let todoSpace = document.createElement('div');
+  todoSpace.id = 'todoSpace';
+  todoSpace.innerHTML = 'Todo';
+  space.appendChild(todoSpace);
 }
 
 export default homepage
