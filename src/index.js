@@ -9,6 +9,9 @@ import todoCancelButton from './todoCancelButton';
 import projectCancelButton from './projectCancelButton';
 import deleteProject from './deleteProject';
 import defaultProject from './defaultProject';
+import todoView from './view/todoView';
+import todoEditView from './view/todoEditView';
+import todoSaveEdit from './view/todoSaveEdit';
 
 homepage();
 projectButtonActions();
@@ -19,3 +22,6 @@ todoCancelButton();
 projectCancelButton();
 defaultProject();
 deleteProject();
+todoView();
+todoEditView();
+todoSaveEdit();

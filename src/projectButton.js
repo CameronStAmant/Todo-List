@@ -3,8 +3,7 @@ import todoButtonActions from './todoButton';
 
 const projectButtonActions = () => {
   let projectForm = document.createElement('FORM');
-  // projectForm.innerHTML = "<label for='title'>Title:</label><input type='text' id='title' name='title' value=''><br><input type='button' id='addProject' value='Create'>";
-  // createProject.appendChild(projectForm);
+
   let projectName = document.createElement('label');
   projectName.innerHTML = 'Name:';
   

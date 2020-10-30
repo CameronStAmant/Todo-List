@@ -1,4 +1,5 @@
 import todoFactory from './todoFactory';
+import todoView from './view/todoView';
 
 const todoIndexToPage = () => {
   let addTodo = document.getElementById('addTodo');
@@ -23,6 +24,7 @@ const todoIndexToPage = () => {
     const todoTitle = document.getElementById('todoTitle');
     todoButton.style.display = 'none';
     todoTitle.value = '';
+    todoView();
   });
 }
 

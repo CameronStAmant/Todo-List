@@ -38,5 +38,11 @@
 }
 
 .delete-btn {
-  display: flex;
+  /* position: fixed;
+  bottom: 20px;
+  left: 100px; */
+}
+
+.todoInfo {
+  display: none;
 }
