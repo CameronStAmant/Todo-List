@@ -35,7 +35,7 @@ const todoButtonActions = () => {
   const todoButton = document.getElementById('createTodo');
   addTodoButton.addEventListener('click', () => {
     todoButton.style.display = 'block';
-    let projectArrayList = []
+    let projectArrayList = [];
     todoProject.innerHTML = '';
     projectArrayList = projectButtonList();
 
