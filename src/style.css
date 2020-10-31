@@ -41,22 +41,28 @@
 
 .delete-btn {
   display: inline-block;
-  /* float: right; */
+  float: right;
   width:100px;
   height: 18px;
 }
 
 .item {
-  /* position: relative; */
+  position: relative;
   display: inline-block;
   text-indent: 1em;
   margin: 0px;
   color: black;
 }
 
+.pItem {
+  display: inline-block;
+  margin: 0px;
+  color: black;
+}
+
 .view-todo {
   /* position: relative; */
-  display:inline-block;
+  display: inline-block;
   color: orange;
   float: right;
   height: 18px;

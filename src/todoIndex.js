@@ -20,7 +20,7 @@ const todoIndexToPage = () => {
 
     let projectPTag = document.createElement('p');
     projectPTag.innerHTML = name;
-    projectPTag.className = 'item';
+    projectPTag.className = 'pItem';
 
     let projectBrTag = document.createElement('br');
     
