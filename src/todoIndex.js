@@ -9,7 +9,6 @@ const todoIndexToPage = () => {
     let newTodoDiv = document.createElement('div');
     newTodoDiv.id = name;
     newTodoDiv.className = 'item';
-    newTodoDiv.innerHTML = name;
 
     let viewTodo = document.createElement('BUTTON');
     viewTodo.innerHTML = 'View';
@@ -18,8 +17,14 @@ const todoIndexToPage = () => {
 
     let selectedProject = document.getElementById('todoProject').value;
     let newTodo = todoFactory(name, selectedProject);
+
+    let projectPTag = document.createElement('p');
+    projectPTag.innerHTML = name;
+    projectPTag.className = 'item';
+    
     document.getElementById(selectedProject).appendChild(newTodoDiv);
-    document.getElementById(selectedProject).appendChild(viewTodo);
+    document.getElementById(newTodoDiv.id).appendChild(projectPTag);
+    document.getElementById(newTodoDiv.id).appendChild(viewTodo);
     const todoButton = document.getElementById('createTodo');
     const todoTitle = document.getElementById('todoTitle');
     todoButton.style.display = 'none';

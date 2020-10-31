@@ -7,7 +7,7 @@ const todoSaveEdit = () => {
     let getID = todoInfo[1].id;
     let updateID = todoInfo[1].value;
     let targetDiv = document.getElementById(getID);
-    targetDiv.innerHTML = updateID;
+    targetDiv.firstElementChild.innerHTML = updateID;
   })
 }
 

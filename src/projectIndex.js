@@ -7,6 +7,7 @@ const projectIndexToPage = () => {
     let workspaceArea = document.getElementById('workspace');
     let newProjectDiv = document.createElement('div');
     newProjectDiv.id = name;
+    newProjectDiv.className = 'project';
     newProjectDiv.innerHTML = name;
 
     let deleteBtn = document.createElement('BUTTON');
@@ -15,7 +16,7 @@ const projectIndexToPage = () => {
     deleteBtn.id = `delete-${newProjectDiv.id}`;
 
     workspaceArea.appendChild(newProjectDiv);
-    workspaceArea.appendChild(deleteBtn);
+    newProjectDiv.appendChild(deleteBtn);
     const projectButton = document.getElementById('createProject');
     const projectName = document.getElementById('projectName');
     projectButton.style.display = 'none';
