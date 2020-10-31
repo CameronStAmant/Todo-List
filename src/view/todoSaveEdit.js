@@ -6,14 +6,12 @@ const todoSaveEdit = () => {
     let todoInfo = document.querySelectorAll('.todoInfo');
     let getID = todoInfo[1].id;
     let updateID = todoInfo[1].value;
+    console.log(`getID ${getID}`)
     let targetDiv = document.getElementById(getID);
-    let targetButton = document.getElementById(`view-${targetDiv.id}`);
-    targetButton.id = `view-${updateID}`;
-    targetDiv.id = updateID;
+    console.log(`updateID ${todoInfo[1]}`);
+    console.log(`old HTML ${targetDiv.innerHTML}`);
     targetDiv.innerHTML = updateID;
-    todoInfo[1].id = updateID;
-    todoInfo[1].value = updateID;
-    todoView(updateID, getID);
+    console.log(`new HTML ${targetDiv.innerHTML}`);
   })
 }
 

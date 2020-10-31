@@ -19,9 +19,8 @@ const todoView = (newValue = null, oldValue = null) => {
               })();
               if (viewTodoItem === null) {
               } else {
-                viewArray[i] = `view-${viewTodoItem.innerHTML}`;
                 todoInfo[1].value = viewTodoItem.innerHTML;
-                todoInfo[1].id = viewTodoItem.innerHTML;
+                todoInfo[1].id = viewTodoItem.id;
                 todoInfo[0].style.display = 'block';
                 todoInfo[1].style.display = 'block';
                 todoInfo[2].style.display = 'block';
@@ -31,7 +30,7 @@ const todoView = (newValue = null, oldValue = null) => {
             } else {
               c.addEventListener('click', viewEvent);
               c.setAttribute('listener', 'true');
-            };d
+            };
           }
         }
       }
