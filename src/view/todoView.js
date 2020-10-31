@@ -31,7 +31,7 @@ const todoView = (newValue = null, oldValue = null) => {
             } else {
               c.addEventListener('click', viewEvent);
               c.setAttribute('listener', 'true');
-            };
+            };d
           }
         }
       }
