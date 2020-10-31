@@ -2,8 +2,6 @@ const todoView = (newValue = null, oldValue = null) => {
   let viewArray = [];
   let viewListings = document.getElementById('workspace');
   (function looper() {    
-    // viewArray = [];
-
     for (let i = 0; i < viewListings.children.length; i++) {
       if (viewListings.children[i].className != 'delete-btn') {
         let ParentID = document.getElementById(viewListings.children[i].id);
@@ -12,7 +10,6 @@ const todoView = (newValue = null, oldValue = null) => {
             let childID = ParentID.children[j].id;
             viewArray[i] = childID;
             let c = document.getElementById(viewArray[i]);
-            // c.addEventListener('click', viewEvent);
               let viewEvent = function () {
               let d = viewArray[i].split('-')[1];
               let viewTodoItem = document.getElementById(d);

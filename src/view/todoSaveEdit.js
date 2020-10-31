@@ -13,7 +13,6 @@ const todoSaveEdit = () => {
     targetDiv.innerHTML = updateID;
     todoInfo[1].id = updateID;
     todoInfo[1].value = updateID;
-    // todoInfo.removeEventListener('click', viewEvent());
     todoView(updateID, getID);
   })
 }
