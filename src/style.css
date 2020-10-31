@@ -20,10 +20,6 @@
   text-align: center;
 }
 
-.item {
-  text-indent: 1em;
-}
-
 .add {
   position: relative;
   left: 50%;
@@ -37,23 +33,34 @@
   display: none;
 }
 
-/* .project {
-  display: block;
+.project {
+  margin: 0px;
+  display: inline-block;
   color: red;
-} */
-/* 
+}
+
 .delete-btn {
-  float: right;
+  display: inline-block;
+  /* float: right; */
   width:100px;
   height: 18px;
 }
 
-.view-todo {
-  float: right;
-  height: 50%;
-  height: 18px;
-} */
+.item {
+  /* position: relative; */
+  display: inline-block;
+  text-indent: 1em;
+  margin: 0px;
+  color: black;
+}
 
+.view-todo {
+  /* position: relative; */
+  display:inline-block;
+  color: orange;
+  float: right;
+  height: 18px;
+} 
 
 .todoInfo {
   display: none;
@@ -61,4 +68,9 @@
 
 body {
   background-color: lightblue;
+}
+
+#projectHeader {
+  margin: 0px;
+  text-align: center;
 }

@@ -21,10 +21,13 @@ const todoIndexToPage = () => {
     let projectPTag = document.createElement('p');
     projectPTag.innerHTML = name;
     projectPTag.className = 'item';
+
+    let projectBrTag = document.createElement('br');
     
     document.getElementById(selectedProject).appendChild(newTodoDiv);
     document.getElementById(newTodoDiv.id).appendChild(projectPTag);
     document.getElementById(newTodoDiv.id).appendChild(viewTodo);
+    document.getElementById(selectedProject).appendChild(projectBrTag);
     const todoButton = document.getElementById('createTodo');
     const todoTitle = document.getElementById('todoTitle');
     todoButton.style.display = 'none';

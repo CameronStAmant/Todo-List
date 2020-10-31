@@ -32,8 +32,12 @@ const homepage = () => {
 
   let workSpace = document.createElement('div');
   workSpace.id = 'workspace';
-  workSpace.innerHTML = 'Projects';
   space.appendChild(workSpace);
+  
+  let workPTag = document.createElement('p');
+  workPTag.innerHTML = 'Projects';
+  workPTag.id = 'projectHeader';
+  workSpace.appendChild(workPTag);
 
   let todoSpace = document.createElement('div');
   todoSpace.id = 'todoSpace';
