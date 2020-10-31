@@ -21,11 +21,11 @@ const projectIndexToPage = () => {
     deleteBtn.className = 'delete-btn';
     deleteBtn.id = `delete-${newProjectDiv.id}`;
 
-    workspaceArea.appendChild(projectBrTag);
+    // workspaceArea.appendChild(projectBrTag);
     workspaceArea.appendChild(newProjectDiv);
     newProjectDiv.appendChild(projectPTag);
     projectPTag.appendChild(deleteBtn);
-    newProjectDiv.appendChild(projectBrTag);
+    // newProjectDiv.appendChild(projectBrTag);
     const projectButton = document.getElementById('createProject');
     const projectName = document.getElementById('projectName');
     projectButton.style.display = 'none';

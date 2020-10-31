@@ -35,7 +35,7 @@
 
 .project {
   margin: 0px;
-  display: inline-block;
+  /* display: inline-block; */
   color: red;
 }
 
