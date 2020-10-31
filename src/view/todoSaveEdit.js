@@ -1,11 +1,9 @@
-// import todoView from './todoView';
+import todoView from './todoView';
 
 const todoSaveEdit = () => {
   let todoEdit = document.getElementById('todoEdit');
-  console.log('re');
   todoEdit.addEventListener('click', () => {
     let todoInfo = document.querySelectorAll('.todoInfo');
-    console.log('r');
     let getID = todoInfo[1].id;
     let updateID = todoInfo[1].value;
     let targetDiv = document.getElementById(getID);
@@ -13,8 +11,10 @@ const todoSaveEdit = () => {
     targetButton.id = `view-${updateID}`;
     targetDiv.id = updateID;
     targetDiv.innerHTML = updateID;
-    console.log('w');
-    // todoView();
+    todoInfo[1].id = updateID;
+    todoInfo[1].value = updateID;
+    // todoInfo.removeEventListener('click', viewEvent());
+    todoView(updateID, getID);
   })
 }
 
