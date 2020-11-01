@@ -37,7 +37,7 @@
 }
 
 .delete-btn {
-  display: inline-block;
+  /* display: inline-block; */
   float: right;
   width:100px;
   height: 18px;
@@ -55,8 +55,8 @@
   color: black;
 }
 
-.view-todo {
-  display: inline-block;
+.view-todo, .delete-todo {
+  /* display: inline-block; */
   float: right;
   height: 18px;
 } 
@@ -66,7 +66,7 @@
 }
 
 body {
-  background-color: lightblue;
+  background-color: rgb(57, 136, 238);
 }
 
 #projectHeader {

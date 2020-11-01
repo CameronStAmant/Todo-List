@@ -1,5 +1,6 @@
 import todoFactory from './todoFactory';
 import todoView from './view/todoView';
+import deleteTodo from './deleteTodo';
 
 const todoIndexToPage = () => {
   let addTodo = document.getElementById('addTodo');
@@ -15,6 +16,11 @@ const todoIndexToPage = () => {
     viewTodo.className = 'view-todo';
     viewTodo.id = `view-${newTodoDiv.id}`;
 
+    let deleteTodoItem = document.createElement('BUTTON');
+    deleteTodoItem.innerHTML = 'Delete';
+    deleteTodoItem.className = 'delete-todo';
+    deleteTodoItem.id = `delete-${newTodoDiv.id}`;
+
     let selectedProject = document.getElementById('todoProject').value;
     let newTodo = todoFactory(name, selectedProject);
 
@@ -25,12 +31,15 @@ const todoIndexToPage = () => {
     let projectBrTag = document.createElement('br');
     
     document.getElementById(selectedProject).appendChild(newTodoDiv);
-    document.getElementById(newTodoDiv.id).appendChild(projectPTag);    document.getElementById(newTodoDiv.id).appendChild(viewTodo);
+    document.getElementById(newTodoDiv.id).appendChild(projectPTag);    
+    document.getElementById(newTodoDiv.id).appendChild(viewTodo);
+    document.getElementById(newTodoDiv.id).appendChild(deleteTodoItem);
     const todoButton = document.getElementById('createTodo');
     const todoTitle = document.getElementById('todoTitle');
     todoButton.style.display = 'none';
     todoTitle.value = '';
     todoView();
+    deleteTodo();
   });
 }
 

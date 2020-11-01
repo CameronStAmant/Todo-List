@@ -10,13 +10,10 @@ const todoView = (newValue = null, oldValue = null) => {
             if (parentID.children[j].children[childrenList].className == 'view-todo') {
               let childID = parentID.children[j].children[childrenList].id;
               viewArray[i] = childID;
-              console.log(`The childID is ${childID}`);
               let c = document.getElementById(viewArray[i]);
               let viewEvent = function () {
                 let d = viewArray[i].split('-')[1];
-                console.log(`d is ${d}`);
                 let viewTodoItem = document.getElementById(d);
-                console.log(`viewTodoItem is ${viewTodoItem.id}`);
                 let todoInfo;
                 (function () {
                   todoInfo = document.querySelectorAll('.todoInfo');

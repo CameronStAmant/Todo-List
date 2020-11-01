@@ -1,7 +1,7 @@
 const deleteProject = () => {
   let projectsListing = document.getElementById('workspace');
   let projectArray = [];
-  for (let i = 0; i < projectsListing.children.length; i++) {
+  for (let i = 1; i < projectsListing.children.length; i++) {
     if (projectsListing.children[i].className != 'delete-btn') {
       let a = projectsListing.children[i].id;
       projectArray[i] = `delete-${a}`;
