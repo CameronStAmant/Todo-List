@@ -9,6 +9,12 @@ const todoButtonActions = () => {
   titleInput.setAttribute('type', 'text');
   titleInput.id = 'todoTitle';
 
+  let titleDescriptionLabel = document.createElement('label');
+  titleDescriptionLabel.innerHTML = 'Description:';
+  let titleDescription = document.createElement('INPUT');
+  titleDescription.setAttribute('type', 'text');
+  titleDescription.id = 'todoDescription';
+
   let todoProjectLabel = document.createElement('label');
   todoProjectLabel.innerHTML = 'Project';
   let todoProject = document.createElement('SELECT');
@@ -26,6 +32,8 @@ const todoButtonActions = () => {
 
   todoForm.appendChild(titleLabel);
   todoForm.appendChild(titleInput);
+  todoForm.appendChild(titleDescriptionLabel);
+  todoForm.appendChild(titleDescription);
   todoForm.appendChild(todoProjectLabel);
   todoForm.appendChild(todoProject);
   todoForm.appendChild(titleSubmit);

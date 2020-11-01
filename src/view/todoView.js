@@ -22,9 +22,18 @@ const todoView = (newValue = null, oldValue = null) => {
                 } else {
                   todoInfo[1].value = viewTodoItem.firstElementChild.innerHTML;
                   todoInfo[1].id = viewTodoItem.id;
+
+                  let addDescription = document.createAttribute('description'); 
+                  addDescription.value = viewTodoItem.getAttribute('description');
+                  todoInfo[3].setAttributeNode(addDescription);
+                  todoInfo[3].value = addDescription.value;
+
+                  // todoInfo[1].description = viewTodoItem.description;
                   todoInfo[0].style.display = 'block';
                   todoInfo[1].style.display = 'block';
                   todoInfo[2].style.display = 'block';
+                  todoInfo[3].style.display = 'block';
+                  todoInfo[4].style.display = 'block';
                 };
               };
               if (c.getAttribute('listener', 'true')) {

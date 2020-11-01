@@ -6,9 +6,14 @@ const todoIndexToPage = () => {
   let addTodo = document.getElementById('addTodo');
   addTodo.addEventListener('click', () => {
     let name = document.getElementById('todoTitle').value;
+    let description = document.getElementById('todoDescription').value;
+    console.log(description);
     let workspaceArea = document.getElementById('workspace');
     let newTodoDiv = document.createElement('div');
     newTodoDiv.id = name;
+    let addDescription = document.createAttribute('description'); 
+    addDescription.value = description;
+    newTodoDiv.setAttributeNode(addDescription);
     newTodoDiv.className = 'item';
 
     let viewTodo = document.createElement('BUTTON');

@@ -12,6 +12,17 @@ const todoEditView = () => {
   todoTitle.className = 'todoInfo';
   todoTitleLabel.appendChild(todoTitle);
 
+  let todoDescriptionLabel = document.createElement('label');
+  todoDescriptionLabel.id = 'todoDescriptionLabel';
+  todoDescriptionLabel.className = 'todoInfo';
+  todoDescriptionLabel.innerHTML = 'Description:';
+  todoSpace.appendChild(todoDescriptionLabel);
+
+  let todoDescription = document.createElement('INPUT');
+  todoDescription.setAttribute('type', 'text');
+  todoDescription.className = 'todoInfo';
+  todoDescriptionLabel.appendChild(todoDescription);
+
   let todoEdit = document.createElement('BUTTON');
   todoEdit.innerHTML = 'Save';
   todoEdit.id = 'todoEdit';
