@@ -37,9 +37,8 @@
 }
 
 .delete-btn {
-  /* display: inline-block; */
   float: right;
-  width:100px;
+  width: 100px;
   height: 18px;
 }
 
@@ -56,7 +55,6 @@
 }
 
 .view-todo, .delete-todo {
-  /* display: inline-block; */
   float: right;
   height: 18px;
 } 
