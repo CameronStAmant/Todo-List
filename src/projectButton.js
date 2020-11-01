@@ -28,7 +28,9 @@ const projectButtonActions = () => {
   createProject.appendChild(projectCancel);
 
   const projectButton = document.getElementById('createProject');
+  const todoButton = document.getElementById('createTodo');
   addProjectButton.addEventListener('click', () => {
+    todoButton.style.display = 'none';
     projectButton.style.display = 'block';
   });
 }

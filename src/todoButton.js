@@ -33,7 +33,9 @@ const todoButtonActions = () => {
   createTodo.appendChild(todoForm);
 
   const todoButton = document.getElementById('createTodo');
+  const projectButton = document.getElementById('createProject');
   addTodoButton.addEventListener('click', () => {
+    projectButton.style.display = 'none';
     todoButton.style.display = 'block';
     let projectArrayList = [];
     todoProject.innerHTML = '';
