@@ -12,15 +12,14 @@ const homepage = () => {
   addProjectButton.id = 'addProjectButton';
   contentDiv.appendChild(addProjectButton);
 
-  let createProject = document.createElement('div');
-  createProject.id = 'createProject';
-  contentDiv.appendChild(createProject);
-
-
   let addTodoButton = document.createElement('BUTTON');
   addTodoButton.innerHTML = '+ Todo';
   addTodoButton.id = 'addTodoButton';
   contentDiv.appendChild(addTodoButton);
+
+  let createProject = document.createElement('div');
+  createProject.id = 'createProject';
+  contentDiv.appendChild(createProject);
 
   let createTodo = document.createElement('div');
   createTodo.id = 'createTodo';
