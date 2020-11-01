@@ -25,9 +25,7 @@ const todoIndexToPage = () => {
     let projectBrTag = document.createElement('br');
     
     document.getElementById(selectedProject).appendChild(newTodoDiv);
-    document.getElementById(newTodoDiv.id).appendChild(projectPTag);
-    document.getElementById(newTodoDiv.id).appendChild(viewTodo);
-    document.getElementById(selectedProject).appendChild(projectBrTag);
+    document.getElementById(newTodoDiv.id).appendChild(projectPTag);    document.getElementById(newTodoDiv.id).appendChild(viewTodo);
     const todoButton = document.getElementById('createTodo');
     const todoTitle = document.getElementById('todoTitle');
     todoButton.style.display = 'none';
