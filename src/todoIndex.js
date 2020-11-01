@@ -41,8 +41,10 @@ const todoIndexToPage = () => {
     document.getElementById(newTodoDiv.id).appendChild(deleteTodoItem);
     const todoButton = document.getElementById('createTodo');
     const todoTitle = document.getElementById('todoTitle');
+    const todoDescription = document.getElementById('todoDescription');
     todoButton.style.display = 'none';
     todoTitle.value = '';
+    todoDescription.value = '';
     todoView();
     deleteTodo();
   });
