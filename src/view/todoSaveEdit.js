@@ -8,6 +8,9 @@ const todoSaveEdit = () => {
     let updateID = todoInfo[1].value;
     let targetDiv = document.getElementById(getID);
     targetDiv.firstElementChild.innerHTML = updateID;
+    todoInfo[0].style.display = 'none';
+    todoInfo[1].style.display = 'none';
+    todoInfo[2].style.display = 'none';
   })
 }
 
