@@ -45,11 +45,6 @@ const todoButtonActions = () => {
   titlePriorityOpt3Label.innerHTML = '!';
   titlePriorityOpt3Label.value = '!';
 
-  // let titlePriorityOpt1 = document.createElement('label');
-  // titlePriorityOpt1.setAttribute('for', 'titlePriority');
-  // titlePriorityOpt1.setAttribute('innerHTML', '!!!');
-  // titlePriorityOpt1.id = 'titlePriorityOpt1';
-
   let todoProjectLabel = document.createElement('label');
   todoProjectLabel.innerHTML = 'Project';
   let todoProject = document.createElement('SELECT');

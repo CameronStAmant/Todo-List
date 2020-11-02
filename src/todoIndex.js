@@ -7,13 +7,24 @@ const todoIndexToPage = () => {
   addTodo.addEventListener('click', () => {
     let name = document.getElementById('todoTitle').value;
     let description = document.getElementById('todoDescription').value;
-    console.log(description);
+    let priority;
+    if (document.getElementById('titlePriorityOpt1').checked == true) {
+      priority = 1;
+    } else if (document.getElementById('titlePriorityOpt2').checked == true) {
+      priority = 2;
+    } else if (document.getElementById('titlePriorityOpt3').checked == true) {
+      priority = 3;
+    }
     let workspaceArea = document.getElementById('workspace');
     let newTodoDiv = document.createElement('div');
     newTodoDiv.id = name;
     let addDescription = document.createAttribute('description'); 
     addDescription.value = description;
     newTodoDiv.setAttributeNode(addDescription);
+    
+    let addPriority = document.createAttribute('priority');
+    addPriority.value = priority;
+    newTodoDiv.setAttributeNode(addPriority);
     newTodoDiv.className = 'item';
 
     let viewTodo = document.createElement('BUTTON');

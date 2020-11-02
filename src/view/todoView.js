@@ -28,12 +28,24 @@ const todoView = (newValue = null, oldValue = null) => {
                   todoInfo[3].setAttributeNode(addDescription);
                   todoInfo[3].value = addDescription.value;
 
+                  let addPriority = document.createAttribute('priority');
+                  addPriority.value = viewTodoItem.getAttribute('priority');
+                  if (addPriority.value == 1) {
+                    document.getElementById('titlePriorityEditOpt1').checked = true;
+                  } else if (addPriority.value == 2) {
+                    document.getElementById('titlePriorityEditOpt2').checked = true;
+                  } else if (addPriority.value == 3) {
+                    document.getElementById('titlePriorityEditOpt3').checked = true;
+                  }
+
                   // todoInfo[1].description = viewTodoItem.description;
                   todoInfo[0].style.display = 'block';
                   todoInfo[1].style.display = 'block';
                   todoInfo[2].style.display = 'block';
                   todoInfo[3].style.display = 'block';
                   todoInfo[4].style.display = 'block';
+                  todoInfo[5].style.display = 'block';
+                  // todoInfo[6].style.display = 'block';
                 };
               };
               if (c.getAttribute('listener', 'true')) {
