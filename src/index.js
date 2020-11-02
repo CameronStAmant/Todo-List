@@ -13,6 +13,7 @@ import todoView from './view/todoView';
 import todoEditView from './view/todoEditView';
 import todoSaveEdit from './view/todoSaveEdit';
 import deleteTodo from './deleteTodo';
+// import restoreEventListeners from './restoreEventListeners';
 
 homepage();
 projectButtonActions();
@@ -28,3 +29,12 @@ todoView();
 todoEditView();
 todoSaveEdit();
 deleteTodo();
+if (localStorage.getItem('everything') !== null) {
+  let workspaceArea = document.getElementById('workspace');
+  workspaceArea.innerHTML = '';
+  workspaceArea.innerHTML = localStorage.getItem(`everything`);
+  // restoreEventListeners();
+  deleteProject();
+  todoIndexToPage();
+  deleteTodo();
+}

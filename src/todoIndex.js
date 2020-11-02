@@ -74,6 +74,8 @@ const todoIndexToPage = () => {
     todoDescription.value = '';
     todoView();
     deleteTodo();
+    // let myStorage = window.localStorage;
+    localStorage.setItem(`everything`, `${workspaceArea.innerHTML}`);
   });
 }
 
