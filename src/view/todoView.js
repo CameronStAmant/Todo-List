@@ -38,14 +38,12 @@ const todoView = (newValue = null, oldValue = null) => {
                     document.getElementById('titlePriorityEditOpt3').checked = true;
                   }
 
-                  // todoInfo[1].description = viewTodoItem.description;
                   todoInfo[0].style.display = 'block';
                   todoInfo[1].style.display = 'block';
                   todoInfo[2].style.display = 'block';
                   todoInfo[3].style.display = 'block';
                   todoInfo[4].style.display = 'block';
                   todoInfo[5].style.display = 'block';
-                  // todoInfo[6].style.display = 'block';
                 };
               };
               if (c.getAttribute('listener', 'true')) {
