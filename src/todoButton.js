@@ -60,10 +60,17 @@ const todoButtonActions = () => {
   titleCancel.id = 'cancelTodo';
   titleCancel.value = 'Cancel';
 
+  let breakBr1 = document.createElement('br');
+  let breakBr2 = document.createElement('br');
+  let breakBr3 = document.createElement('br');
+  let breakBr4 = document.createElement('br');
+
   todoForm.appendChild(titleLabel);
   todoForm.appendChild(titleInput);
+  todoForm.appendChild(breakBr1);
   todoForm.appendChild(titleDescriptionLabel);
   todoForm.appendChild(titleDescription);
+  todoForm.appendChild(breakBr2);
   todoForm.appendChild(titlePriorityLabel);
   titlePriorityLabel.appendChild(titlePriorityOpt1);
   titlePriorityLabel.appendChild(titlePriorityOpt1Label);
@@ -71,19 +78,26 @@ const todoButtonActions = () => {
   titlePriorityLabel.appendChild(titlePriorityOpt2Label);
   titlePriorityLabel.appendChild(titlePriorityOpt3);
   titlePriorityLabel.appendChild(titlePriorityOpt3Label);
-
+  todoForm.appendChild(breakBr3);
   todoForm.appendChild(todoProjectLabel);
   todoForm.appendChild(todoProject);
+  todoForm.appendChild(breakBr4);
   todoForm.appendChild(titleSubmit);
   todoForm.appendChild(titleCancel);
   createTodo.appendChild(todoForm);
 
   const todoButton = document.getElementById('createTodo');
   const projectButton = document.getElementById('createProject');
+  const todoPriorityOp1 = document.getElementById('titlePriorityOpt1');
+  const todoPriorityOp2 = document.getElementById('titlePriorityOpt2');
+  const todoPriorityOp3 = document.getElementById('titlePriorityOpt3');
   addTodoButton.addEventListener('click', () => {
     projectButton.style.display = 'none';
     titleInput.value = '';
     titleDescription.value = '';
+    todoPriorityOp1.checked = false;
+    todoPriorityOp2.checked = false;
+    todoPriorityOp3.checked = false;
     todoButton.style.display = 'block';
     let projectArrayList = [];
     todoProject.innerHTML = '';
