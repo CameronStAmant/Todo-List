@@ -1,6 +1,7 @@
 import todoFactory from './todoFactory';
 import todoView from './view/todoView';
 import deleteTodo from './deleteTodo';
+import { format } from 'date-fns';
 
 const todoIndexToPage = () => {
   let addTodo = document.getElementById('addTodo');
@@ -15,6 +16,10 @@ const todoIndexToPage = () => {
     } else if (document.getElementById('titlePriorityOpt3').checked == true) {
       priority = 3;
     }
+
+    let dueDate = document.getElementById('todoDueDate').value;
+
+
     let workspaceArea = document.getElementById('workspace');
     let newTodoDiv = document.createElement('div');
     newTodoDiv.id = name;
@@ -26,6 +31,10 @@ const todoIndexToPage = () => {
     addPriority.value = priority;
     newTodoDiv.setAttributeNode(addPriority);
     newTodoDiv.className = 'item';
+
+    let addDueDate = document.createAttribute('dueDate');
+    addDueDate.value = dueDate;
+    newTodoDiv.setAttributeNode(addDueDate);
 
     let viewTodo = document.createElement('BUTTON');
     viewTodo.innerHTML = 'View';
@@ -44,10 +53,17 @@ const todoIndexToPage = () => {
     projectPTag.innerHTML = name;
     projectPTag.className = 'pItem';
 
+    let dueDatePTag = document.createElement('p');
+    let dueDateSplitter = dueDate.split('-');
+    dueDatePTag.innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}`, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
+    dueDatePTag.className = 'pItem';
+
+
     let projectBrTag = document.createElement('br');
     
     document.getElementById(selectedProject).appendChild(newTodoDiv);
-    document.getElementById(newTodoDiv.id).appendChild(projectPTag);    
+    document.getElementById(newTodoDiv.id).appendChild(projectPTag);  
+    document.getElementById(newTodoDiv.id).appendChild(dueDatePTag)  
     document.getElementById(newTodoDiv.id).appendChild(viewTodo);
     document.getElementById(newTodoDiv.id).appendChild(deleteTodoItem);
     const todoButton = document.getElementById('createTodo');

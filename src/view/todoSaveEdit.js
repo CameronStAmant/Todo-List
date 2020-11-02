@@ -1,4 +1,5 @@
 import todoView from './todoView';
+import { format } from 'date-fns';
 
 const todoSaveEdit = () => {
   let todoEdit = document.getElementById('todoEdit');
@@ -15,10 +16,13 @@ const todoSaveEdit = () => {
     } else if (document.getElementById('titlePriorityEditOpt3').checked == true) {
       updatePriority = 3;
     }
+    let updateDueDate = todoInfo[6].value;
     let targetDiv = document.getElementById(getID);
-    targetDiv.firstElementChild.innerHTML = updateID;
+    let dueDateSplitter = updateDueDate.split('-');
+    targetDiv.children[1].innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}`, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
     targetDiv.setAttribute('description', updateDescription);
     targetDiv.setAttribute('priority', updatePriority);
+    targetDiv.setAttribute('dueDate', updateDueDate);
     todoInfo[0].style.display = 'none';
     todoInfo[1].style.display = 'none';
     todoInfo[2].style.display = 'none';

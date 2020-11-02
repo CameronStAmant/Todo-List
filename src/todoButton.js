@@ -45,8 +45,14 @@ const todoButtonActions = () => {
   titlePriorityOpt3Label.innerHTML = '!';
   titlePriorityOpt3Label.value = '!';
 
+  let todoDueDateLabel = document.createElement('label');
+  todoDueDateLabel.innerHTML = 'Due Date:'
+  let todoDueDate = document.createElement('INPUT');
+  todoDueDate.setAttribute('type', 'date');
+  todoDueDate.id = 'todoDueDate';
+
   let todoProjectLabel = document.createElement('label');
-  todoProjectLabel.innerHTML = 'Project';
+  todoProjectLabel.innerHTML = 'Project:';
   let todoProject = document.createElement('SELECT');
   todoProject.id = 'todoProject';
 
@@ -64,6 +70,7 @@ const todoButtonActions = () => {
   let breakBr2 = document.createElement('br');
   let breakBr3 = document.createElement('br');
   let breakBr4 = document.createElement('br');
+  let breakBr5 = document.createElement('br');
 
   todoForm.appendChild(titleLabel);
   todoForm.appendChild(titleInput);
@@ -78,10 +85,14 @@ const todoButtonActions = () => {
   titlePriorityLabel.appendChild(titlePriorityOpt2Label);
   titlePriorityLabel.appendChild(titlePriorityOpt3);
   titlePriorityLabel.appendChild(titlePriorityOpt3Label);
+  todoForm.appendChild(titlePriorityOpt3Label);
   todoForm.appendChild(breakBr3);
+  todoForm.appendChild(todoDueDateLabel);
+  todoForm.appendChild(todoDueDate);
+  todoForm.appendChild(breakBr4);
   todoForm.appendChild(todoProjectLabel);
   todoForm.appendChild(todoProject);
-  todoForm.appendChild(breakBr4);
+  todoForm.appendChild(breakBr5);
   todoForm.appendChild(titleSubmit);
   todoForm.appendChild(titleCancel);
   createTodo.appendChild(todoForm);
@@ -98,6 +109,7 @@ const todoButtonActions = () => {
     todoPriorityOp1.checked = false;
     todoPriorityOp2.checked = false;
     todoPriorityOp3.checked = false;
+    todoDueDate.value = '';
     todoButton.style.display = 'block';
     let projectArrayList = [];
     todoProject.innerHTML = '';

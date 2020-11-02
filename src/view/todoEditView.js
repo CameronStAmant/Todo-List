@@ -65,8 +65,18 @@ const todoEditView = () => {
   titlePriorityEditOpt3Label.value = '!';
   todoPriorityEditLabel.appendChild(titlePriorityEditOpt3Label);
 
+  let todoDueDateEditLabel = document.createElement('label');
+  todoDueDateEditLabel.id = 'todoDueDateEditLabel';
+  todoDueDateEditLabel.className = 'todoInfo';
+  todoDueDateEditLabel.innerHTML = 'Due Date:';
+  todoSpace.appendChild(todoDueDateEditLabel);
 
-  
+  let todoDueDateEdit = document.createElement('INPUT');
+  todoDueDateEdit.setAttribute('type', 'date');
+  todoDueDateEdit.className = 'todoInfo';
+  todoDueDateEditLabel.appendChild(todoDueDateEdit);
+
+
 
   let todoEdit = document.createElement('BUTTON');
   todoEdit.innerHTML = 'Save';
