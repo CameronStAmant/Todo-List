@@ -18,6 +18,7 @@ const projectIndexToPage = () => {
     let deleteBtn = document.createElement('BUTTON');
     deleteBtn.innerHTML = 'Remove';
     deleteBtn.className = 'delete-btn';
+    deleteBtn.value = 'a';
     deleteBtn.id = `delete-${newProjectDiv.id}`;
 
     workspaceArea.appendChild(newProjectDiv);
