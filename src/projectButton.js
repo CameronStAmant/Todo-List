@@ -31,6 +31,7 @@ const projectButtonActions = () => {
   const todoButton = document.getElementById('createTodo');
   addProjectButton.addEventListener('click', () => {
     todoButton.style.display = 'none';
+    projectTitleInput.value = '';
     projectButton.style.display = 'block';
   });
 }

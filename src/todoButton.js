@@ -44,6 +44,8 @@ const todoButtonActions = () => {
   const projectButton = document.getElementById('createProject');
   addTodoButton.addEventListener('click', () => {
     projectButton.style.display = 'none';
+    titleInput.value = '';
+    titleDescription.value = '';
     todoButton.style.display = 'block';
     let projectArrayList = [];
     todoProject.innerHTML = '';
