@@ -29,6 +29,9 @@ const todoEditView = () => {
   todoPriorityEditLabel.innerHTML = 'Priority:';
   todoSpace.appendChild(todoPriorityEditLabel);
 
+  let breakBr = document.createElement('br');
+  todoPriorityEditLabel.appendChild(breakBr);
+
 
   let titlePriorityEditOpt1 = document.createElement('INPUT');
   titlePriorityEditOpt1.setAttribute('type', 'radio');

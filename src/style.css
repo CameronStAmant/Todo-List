@@ -17,6 +17,20 @@
   height: 100%;
   border: 5px solid black;
   text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+#todoSpace .todoInfo .todoInfo {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#todoEdit {
+  
+  margin: 0 auto;
+
 }
 
 #addTodoButton {
