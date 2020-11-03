@@ -16,24 +16,25 @@ import deleteTodo from './deleteTodo';
 
 homepage();
 projectButtonActions();
-projectIndexToPage();
+if (localStorage.getItem('everything') !== null) {
+  let workspaceArea = document.getElementById('workspace');
+  workspaceArea.innerHTML = '';
+  workspaceArea.innerHTML = localStorage.getItem(`everything`);
+  projectIndexToPage('true');
+  deleteProject();
+  todoView('true');
+  deleteTodo();
+} else {
+  projectIndexToPage();
+  defaultProject();
+}
 todoButtonActions();
 todoIndexToPage();
 todoCancelButton();
 projectCancelButton();
-defaultProject();
 deleteProject();
 deleteTodo();
 todoView();
 todoEditView();
 todoSaveEdit();
 deleteTodo();
-if (localStorage.getItem('everything') !== null) {
-  let workspaceArea = document.getElementById('workspace');
-  workspaceArea.innerHTML = '';
-  workspaceArea.innerHTML = localStorage.getItem(`everything`);
-  deleteProject();
-  todoView('true');
-  deleteTodo();
-  // projectIndexToPage('true');
-}

@@ -29,6 +29,7 @@ const projectIndexToPage = (localStorageReloaded = null) => {
     projectButton.style.display = 'none';
     projectName.value = '';
     deleteProject();
+    localStorage.setItem(`everything`, `${workspaceArea.innerHTML}`);
   });
 }
 
