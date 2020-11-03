@@ -11,8 +11,7 @@ const todoButtonActions = () => {
 
   let titleDescriptionLabel = document.createElement('label');
   titleDescriptionLabel.innerHTML = 'Description:';
-  let titleDescription = document.createElement('INPUT');
-  titleDescription.setAttribute('type', 'text');
+  let titleDescription = document.createElement('TEXTAREA');
   titleDescription.id = 'todoDescription';
 
   let titlePriorityLabel = document.createElement('label');

@@ -18,8 +18,7 @@ const todoEditView = () => {
   todoDescriptionLabel.innerHTML = 'Description:';
   todoSpace.appendChild(todoDescriptionLabel);
 
-  let todoDescription = document.createElement('INPUT');
-  todoDescription.setAttribute('type', 'text');
+  let todoDescription = document.createElement('TEXTAREA');
   todoDescription.className = 'todoInfo';
   todoDescriptionLabel.appendChild(todoDescription);
 
