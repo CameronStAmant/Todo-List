@@ -1,4 +1,4 @@
-const todoView = (newValue = null, oldValue = null) => {
+const todoView = (localStorageReloaded = null) => {
   let viewArray = [];
   let projectList = document.getElementById('workspace');
   (function looper() {
@@ -53,7 +53,7 @@ const todoView = (newValue = null, oldValue = null) => {
                   todoInfo[7].style.display = 'block';
                 };
               };
-              if (c.getAttribute('listener', 'true')) {
+              if (c.getAttribute('listener', 'true') && localStorageReloaded === null) {
               } else {
                 c.addEventListener('click', viewEvent);
                 c.setAttribute('listener', 'true');

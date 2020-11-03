@@ -30,6 +30,8 @@ const todoSaveEdit = () => {
     todoInfo[3].style.display = 'none';
     todoInfo[4].style.display = 'none';
     todoInfo[5].style.display = 'none';
+    let workspaceArea = document.getElementById('workspace');
+    localStorage.setItem(`everything`, `${workspaceArea.innerHTML}`);
   })
 }
 

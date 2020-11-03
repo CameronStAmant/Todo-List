@@ -1,6 +1,6 @@
 import deleteProject from './deleteProject';
 
-const projectIndexToPage = () => {
+const projectIndexToPage = (localStorageReloaded = null) => {
   let addProject = document.getElementById('addProject');
   addProject.addEventListener('click', () => {
     let name = document.getElementById('projectName').value;

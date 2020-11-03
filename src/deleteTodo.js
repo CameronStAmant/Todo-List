@@ -11,6 +11,8 @@ const deleteTodo = () => {
           }
           document.getElementById(listObjSplit).remove();
           listObj.remove();
+          let workspaceArea = document.getElementById('workspace');
+          localStorage.setItem(`everything`, `${workspaceArea.innerHTML}`);
         })
     });
 }

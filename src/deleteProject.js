@@ -13,6 +13,8 @@ const deleteProject = () => {
         }
         document.getElementById(c).remove();
         b.remove();
+        let workspaceArea = document.getElementById('workspace');
+        localStorage.setItem(`everything`, `${workspaceArea.innerHTML}`);
       }) 
     }
   }

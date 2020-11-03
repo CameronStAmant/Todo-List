@@ -56,7 +56,7 @@ const todoIndexToPage = () => {
     let dueDatePTag = document.createElement('p');
     let dueDateSplitter = dueDate.split('-');
     dueDatePTag.innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}`, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
-    dueDatePTag.className = 'pItem';
+    dueDatePTag.className = 'pItemDueDates';
 
 
     let projectBrTag = document.createElement('br');
@@ -74,7 +74,6 @@ const todoIndexToPage = () => {
     todoDescription.value = '';
     todoView();
     deleteTodo();
-    // let myStorage = window.localStorage;
     localStorage.setItem(`everything`, `${workspaceArea.innerHTML}`);
   });
 }

@@ -72,6 +72,12 @@
   color: black;
 }
 
+.pItemDueDates {
+  display: inline-block;
+  margin: 0px;
+  color: black;
+}
+
 .view-todo, .delete-todo {
   float: right;
   height: 18px;
