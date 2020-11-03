@@ -25,14 +25,15 @@ if (localStorage.getItem('everything') !== null) {
 } else {
   projectIndexToPage();
   defaultProject();
+  todoView();
+  deleteTodo();
 }
 todoButtonActions();
 todoIndexToPage();
 todoCancelButton();
 projectCancelButton();
 deleteProject();
-deleteTodo();
-todoView();
+// deleteTodo();
+// todoView();
 todoEditView();
 todoSaveEdit();
-deleteTodo();
