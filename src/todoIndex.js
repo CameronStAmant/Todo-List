@@ -8,7 +8,7 @@ const todoIndexToPage = () => {
   addTodo.addEventListener('click', () => {
     let name = document.getElementById('todoTitle').value;
     if (document.getElementById(name) != null) {
-      alert('There is already a todo with that title.');
+      alert('There is already a todo with that title. Please choose a new title');
       return;
     }
     let description = document.getElementById('todoDescription').value;
