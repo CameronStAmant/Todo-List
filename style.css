@@ -1,0 +1,97 @@
+#header {
+  text-align: center;
+}
+
+#space {
+    display: flex;
+}
+
+#workspace {
+  width: 30%;
+  height: 100%;
+  border: 5px solid black;
+}
+
+#todoSpace {
+  width: 70%;
+  height: 100%;
+  border: 5px solid black;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+#todoSpace .todoInfo .todoInfo {
+  display: inline-block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#todoEdit {
+  
+  margin: 0 auto;
+
+}
+
+#addTodoButton {
+  display: float;
+}
+
+.add {
+  position: relative;
+  left: 50%;
+}
+
+#createProject {
+  display: none;
+}
+
+#createTodo {
+  display: none;
+}
+
+.project {
+  margin: 0px;
+}
+
+.delete-btn {
+  float: right;
+  width: 100px;
+  height: 18px;
+}
+
+.item {
+  text-indent: 1em;
+  margin: 0px;
+  color: black;
+}
+
+.pItem {
+  display: inline-block;
+  margin: 0px;
+  color: black;
+}
+
+.pItemDueDates {
+  display: inline-block;
+  margin: 0px;
+  color: black;
+}
+
+.view-todo, .delete-todo {
+  float: right;
+  height: 18px;
+} 
+
+.todoInfo {
+  display: none;
+}
+
+body {
+  background-color: rgb(57, 136, 238);
+}
+
+#projectHeader {
+  margin: 0px;
+  text-align: center;
+}
