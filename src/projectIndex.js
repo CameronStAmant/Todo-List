@@ -4,6 +4,10 @@ const projectIndexToPage = (localStorageReloaded = null) => {
   let addProject = document.getElementById('addProject');
   addProject.addEventListener('click', () => {
     let name = document.getElementById('projectName').value;
+    if (document.getElementById(name) == null && localStorageReloaded === null && localStorage.getItem('everything') !== null) {
+      alert('Give your project a name.');
+      return;
+    }
     let workspaceArea = document.getElementById('workspace');
     let newProjectDiv = document.createElement('div');
     newProjectDiv.id = name;
