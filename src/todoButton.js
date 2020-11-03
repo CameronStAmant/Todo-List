@@ -92,8 +92,8 @@ const todoButtonActions = () => {
   todoForm.appendChild(todoProjectLabel);
   todoForm.appendChild(todoProject);
   todoForm.appendChild(breakBr5);
-  todoForm.appendChild(titleSubmit);
   todoForm.appendChild(titleCancel);
+  todoForm.appendChild(titleSubmit);
   createTodo.appendChild(todoForm);
 
   const todoButton = document.getElementById('createTodo');

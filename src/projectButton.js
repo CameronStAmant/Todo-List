@@ -21,11 +21,14 @@ const projectButtonActions = () => {
   projectCancel.setAttribute('value', 'Cancel');
   projectCancel.id = 'cancelProject';
 
+  let breakBr1 = document.createElement('br');
+
   createProject.appendChild(projectForm);
   createProject.appendChild(projectName);
   createProject.appendChild(projectTitleInput);
-  createProject.appendChild(projectSubmit);
+  createProject.appendChild(breakBr1);
   createProject.appendChild(projectCancel);
+  createProject.appendChild(projectSubmit);
 
   const projectButton = document.getElementById('createProject');
   const todoButton = document.getElementById('createTodo');
