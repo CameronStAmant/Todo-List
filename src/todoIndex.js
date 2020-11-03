@@ -7,6 +7,10 @@ const todoIndexToPage = () => {
   let addTodo = document.getElementById('addTodo');
   addTodo.addEventListener('click', () => {
     let name = document.getElementById('todoTitle').value;
+    if (document.getElementById(name) != null) {
+      alert('There is already a todo with that title.');
+      return;
+    }
     let description = document.getElementById('todoDescription').value;
     let priority;
     if (document.getElementById('titlePriorityOpt1').checked == true) {
