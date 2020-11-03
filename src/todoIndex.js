@@ -1,4 +1,3 @@
-import todoFactory from './todoFactory';
 import todoView from './view/todoView';
 import deleteTodo from './deleteTodo';
 import { format } from 'date-fns';
@@ -22,7 +21,6 @@ const todoIndexToPage = () => {
     }
 
     let dueDate = document.getElementById('todoDueDate').value;
-
 
     let workspaceArea = document.getElementById('workspace');
     let newTodoDiv = document.createElement('div');
@@ -51,7 +49,6 @@ const todoIndexToPage = () => {
     deleteTodoItem.id = `delete-${newTodoDiv.id}`;
 
     let selectedProject = document.getElementById('todoProject').value;
-    let newTodo = todoFactory(name, selectedProject);
 
     let projectPTag = document.createElement('p');
     projectPTag.innerHTML = name;
@@ -61,9 +58,6 @@ const todoIndexToPage = () => {
     let dueDateSplitter = dueDate.split('-');
     dueDatePTag.innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}` - 1, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
     dueDatePTag.className = 'pItemDueDates';
-
-
-    let projectBrTag = document.createElement('br');
     
     document.getElementById(selectedProject).appendChild(newTodoDiv);
     document.getElementById(newTodoDiv.id).appendChild(projectPTag);  

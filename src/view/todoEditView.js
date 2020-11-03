@@ -1,5 +1,4 @@
 const todoEditView = () => {
-  let todoForm = document.createElement('FORM');
 
   let todoTitleLabel = document.createElement('label');
   todoTitleLabel.id = 'todoTitleLabel';
@@ -74,8 +73,6 @@ const todoEditView = () => {
   todoDueDateEdit.setAttribute('type', 'date');
   todoDueDateEdit.className = 'todoInfo';
   todoDueDateEditLabel.appendChild(todoDueDateEdit);
-
-
 
   let todoEdit = document.createElement('BUTTON');
   todoEdit.innerHTML = 'Save';

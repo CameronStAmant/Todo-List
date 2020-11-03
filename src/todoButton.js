@@ -1,4 +1,3 @@
-import projectIndexToPage from './projectIndex';
 import projectButtonList from './projectList';
 
 const todoButtonActions = () => {

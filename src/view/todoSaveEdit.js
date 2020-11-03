@@ -1,4 +1,3 @@
-import todoView from './todoView';
 import { format } from 'date-fns';
 
 const todoSaveEdit = () => {

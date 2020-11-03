@@ -13,8 +13,6 @@ const projectIndexToPage = (localStorageReloaded = null) => {
     projectPTag.innerHTML = name;
     projectPTag.className = 'project';
 
-    let projectBrTag = document.createElement('br');
-
     let deleteBtn = document.createElement('BUTTON');
     deleteBtn.innerHTML = 'Remove';
     deleteBtn.className = 'delete-btn';

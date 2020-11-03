@@ -1,6 +1,3 @@
-import projectIndexToPage from './projectIndex';
-import todoButtonActions from './todoButton';
-
 const projectButtonActions = () => {
   let projectForm = document.createElement('FORM');
 

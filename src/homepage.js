@@ -1,5 +1,3 @@
-import projectIndexToPage from './projectIndex';
-
 const homepage = () => {
   let contentDiv = document.getElementById('content');
   let header = document.createElement('h1');

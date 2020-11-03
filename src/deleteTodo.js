@@ -1,6 +1,4 @@
 const deleteTodo = () => {
-  let projectsListing = document.getElementById('workspace');
-  let projectArray = [];
   let pList = document.querySelectorAll('.delete-todo');
   pList.forEach(
     function(listObj) {

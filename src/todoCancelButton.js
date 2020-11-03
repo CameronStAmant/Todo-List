@@ -1,5 +1,3 @@
-import todoButtonActions from "./todoButton";
-
 const todoCancelButton = () => {
   const todoCancelClick = document.getElementById('cancelTodo');
   const todoButton = document.getElementById('createTodo');
