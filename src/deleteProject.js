@@ -12,7 +12,6 @@ const deleteProject = () => {
           return;
         }
         let todoInfo = document.querySelectorAll('.todoInfo');
-        console.log(c);
         let parentNode;
         if (document.getElementById(`view-${todoInfo[1].id}`) != null) {
           parentNode = document.getElementById(`view-${todoInfo[1].id}`).parentNode.parentNode.id;

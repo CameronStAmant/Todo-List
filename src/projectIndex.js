@@ -3,18 +3,21 @@ import deleteProject from './deleteProject';
 const projectIndexToPage = (localStorageReloaded = null) => {
   let addProject = document.getElementById('addProject');
   addProject.addEventListener('click', () => {
-    let name = document.getElementById('projectName').value;
-    if (document.getElementById(name) == null && localStorageReloaded === null && localStorage.getItem('everything') !== null) {
+    if (document.getElementById('projectName').value === null) {
       alert('Give your project a name.');
+      return;
+    }
+    if (document.getElementById(document.getElementById('projectName').value) != null) {
+      alert('There is already a project with that title. Please choose a new title');
       return;
     }
     let workspaceArea = document.getElementById('workspace');
     let newProjectDiv = document.createElement('div');
-    newProjectDiv.id = name;
+    newProjectDiv.id = document.getElementById('projectName').value;
     newProjectDiv.className = 'project';
 
     let projectPTag = document.createElement('p');
-    projectPTag.innerHTML = name;
+    projectPTag.innerHTML = document.getElementById('projectName').value;
     projectPTag.className = 'project';
 
     let deleteBtn = document.createElement('BUTTON');

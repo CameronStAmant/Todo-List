@@ -10,11 +10,9 @@ const todoView = (localStorageReloaded = null) => {
             if (parentID.children[j].children[childrenList].className == 'view-todo') {
               let childID = parentID.children[j].children[childrenList].id;
               viewArray[i] = childID;
-              // console.log(viewArray[i]);
               let c = document.getElementById(viewArray[i]);
               let viewEvent = function () {
                 let d = c.id.split('-')[1];
-                // console.log(c.id.split('-')[1]);
                 let viewTodoItem = document.getElementById(d);
                 let todoInfo;
                 (function () {
