@@ -1,6 +1,7 @@
 import todoView from './view/todoView';
 import deleteTodo from './deleteTodo';
 import { format } from 'date-fns';
+import defaultProject from './defaultProject';
 
 const todoIndexToPage = () => {
   let addTodo = document.getElementById('addTodo');
@@ -10,6 +11,14 @@ const todoIndexToPage = () => {
       alert('There is already a todo with that title. Please choose a new title');
       return;
     }
+    if (document.getElementById('todoDueDate').value === '') {
+      alert('Please choose a due date.');
+      return;
+    }
+    // if (document.getElementById('todoProject').value === '') {
+    //   alert('Please choose a project');
+
+    // }
     let description = document.getElementById('todoDescription').value;
     let priority;
     if (document.getElementById('titlePriorityOpt1').checked == true) {
@@ -48,7 +57,13 @@ const todoIndexToPage = () => {
     deleteTodoItem.className = 'delete-todo';
     deleteTodoItem.id = `delete-${newTodoDiv.id}`;
 
-    let selectedProject = document.getElementById('todoProject').value;
+    let selectedProject;
+    if (document.getElementById('todoProject').value === '') {
+      selectedProject = 'Default';
+      defaultProject();
+    } else {
+      selectedProject = document.getElementById('todoProject').value;
+    }
 
     let projectPTag = document.createElement('p');
     projectPTag.innerHTML = name;
