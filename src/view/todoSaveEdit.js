@@ -20,7 +20,7 @@ const todoSaveEdit = () => {
     let targetDiv = document.getElementById(getID);
     targetDiv.firstElementChild.innerHTML = updateID;
     let dueDateSplitter = updateDueDate.split('-');
-    targetDiv.children[1].innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}`, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
+    targetDiv.children[1].innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}` - 1, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
     targetDiv.setAttribute('description', updateDescription);
     targetDiv.setAttribute('priority', updatePriority);
     targetDiv.setAttribute('dueDate', updateDueDate);

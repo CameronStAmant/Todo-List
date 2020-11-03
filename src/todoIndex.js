@@ -55,7 +55,7 @@ const todoIndexToPage = () => {
 
     let dueDatePTag = document.createElement('p');
     let dueDateSplitter = dueDate.split('-');
-    dueDatePTag.innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}`, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
+    dueDatePTag.innerHTML = format(new Date(`${dueDateSplitter[0]}`, `${dueDateSplitter[1]}` - 1, `${dueDateSplitter[2]}`), 'MM/dd/yyyy');
     dueDatePTag.className = 'pItemDueDates';
 
 
