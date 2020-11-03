@@ -15,10 +15,6 @@ const todoIndexToPage = () => {
       alert('Please choose a due date.');
       return;
     }
-    // if (document.getElementById('todoProject').value === '') {
-    //   alert('Please choose a project');
-
-    // }
     let description = document.getElementById('todoDescription').value;
     let priority;
     if (document.getElementById('titlePriorityOpt1').checked == true) {
