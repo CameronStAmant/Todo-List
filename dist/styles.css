@@ -3,7 +3,7 @@
 }
 
 #space {
-    display: flex;
+  display: flex;
 }
 
 #workspace {
@@ -28,9 +28,7 @@
 }
 
 #todoEdit {
-  
   margin: 0 auto;
-
 }
 
 #addTodoButton {
@@ -78,10 +76,11 @@
   color: black;
 }
 
-.view-todo, .delete-todo {
+.view-todo,
+.delete-todo {
   float: right;
   height: 18px;
-} 
+}
 
 .todoInfo {
   display: none;
